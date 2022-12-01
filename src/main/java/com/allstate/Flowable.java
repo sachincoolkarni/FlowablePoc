@@ -21,10 +21,11 @@ import java.util.Scanner;
 
 public class Flowable {
     public static void main(String[] args) {
-        
-        CallExternalSystemDelegate cs = new CallExternalSystemDelegate();
-        SendRejectionMail se = new SendRejectionMail();
-        ProcessEngineConfiguration cfg= new StandaloneProcessEngineConfiguration().setJdbcUrl("jdbc:h2:mem:flowable;DB_CLOSE_DELAY=-1")
+        @Autowired
+        private  CallExternalSystemDelegate callExternalSystemDelegate;
+        @Autowired
+        private  SendRejectionMail sendRejectionMail;
+         ProcessEngineConfiguration cfg= new StandaloneProcessEngineConfiguration().setJdbcUrl("jdbc:h2:mem:flowable;DB_CLOSE_DELAY=-1")
                 .setJdbcUsername("sa")
                 .setJdbcPassword("")
                 .setJdbcDriver("org.h2.Driver")
