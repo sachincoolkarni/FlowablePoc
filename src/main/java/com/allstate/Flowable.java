@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 public class Flowable {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
+        
         CallExternalSystemDelegate cs = new CallExternalSystemDelegate();
         SendRejectionMail se = new SendRejectionMail();
         ProcessEngineConfiguration cfg= new StandaloneProcessEngineConfiguration().setJdbcUrl("jdbc:h2:mem:flowable;DB_CLOSE_DELAY=-1")
